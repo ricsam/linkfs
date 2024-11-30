@@ -1,8 +1,8 @@
 {
   "name": "@ricsam/linkfs",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Rewrites filesystem paths",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "types": "types",
   "keywords": [
     "fs",
@@ -38,7 +38,7 @@
     }
   },
   "scripts": {
-    "build": "bun build src/index.ts --outdir ./build --target node && tsc -p tsconfig.build.json",
+    "build": "bun build src/index.ts --outdir ./dist --target node && tsc -p tsconfig.build.json",
     "test": "bun test"
   }
 }
