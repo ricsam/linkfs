@@ -23,7 +23,7 @@
     "memfs": "4.14.0",
     "typescript": "5.7.2",
     "@types/bun": "latest",
-    "semantic-release": "^24.2.0",
+    "@changesets/cli": "^2.27.10",
     "prettier": "^3.4.1"
   },
   "peerDependencies": {
@@ -36,7 +36,6 @@
   },
   "scripts": {
     "build": "bun build src/index.ts --outdir ./build --target node && tsc -p tsconfig.build.json",
-    "test": "bun test",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "test": "bun test"
   }
 }
