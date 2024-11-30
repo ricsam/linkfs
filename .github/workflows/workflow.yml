@@ -1,4 +1,8 @@
 name: linkfs
+on:
+  push:
+    branches:
+      - "main"
 jobs:
   publish:
     name: publish
