@@ -4,9 +4,11 @@
 
 Redirects filesystem paths.
 
-[![][npm-img]][npm-url] [![][travis-badge]][travis-url]
+[![][npm-img]][npm-url]
 
-    npm install --save @ricsam/linkfs
+```bash
+npm install --save @ricsam/linkfs
+```
 
 ```js
 import { link } from "linkfs";
@@ -43,14 +45,12 @@ const lfs = link(fs, [
 ]);
 ```
 
-[npm-url]: https://www.npmjs.com/package/linkfs
-[npm-img]: https://img.shields.io/npm/v/linkfs.svg
+[npm-url]: https://www.npmjs.com/package/@ricsam/linkfs
+[npm-img]: https://img.shields.io/npm/v/@ricsam/linkfs.svg
 [memfs]: https://github.com/streamich/memfs
 [unionfs]: https://github.com/streamich/unionfs
 [linkfs]: https://github.com/streamich/linkfs
 [fs-monkey]: https://github.com/streamich/fs-monkey
-[travis-url]: https://travis-ci.org/streamich/linkfs
-[travis-badge]: https://travis-ci.org/streamich/linkfs.svg?branch=master
 
 # License
 
