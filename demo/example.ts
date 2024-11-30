@@ -1,7 +1,6 @@
-import {link} from '../src';
-import {Volume} from '../../memfs/src';
+import { link } from "../src";
+import { createFsFromVolume, Volume } from "memfs";
 
-
-const vol = Volume.fromJSON({'/foo': 'bar'});
-const linkfs = link(vol, [['/foo2', '/foo']]);
-console.log(linkfs.readFileSync('/foo2', 'utf8'));
+const vol = Volume.fromJSON({ "/foo": "bar" });
+const linkfs = link(createFsFromVolume(vol), [["/foo2", "/foo"]]);
+console.log(linkfs.readFileSync("/foo2", "utf8"));
