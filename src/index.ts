@@ -1,4 +1,3 @@
-import type { IFs } from "memfs";
 import * as nodePath from "node:path";
 import {
   multiArgMethods,
@@ -7,7 +6,7 @@ import {
   staticProps,
 } from "./args";
 
-export function link(fs: IFs, rewrites: string[] | string[][]): IFs {
+export function link<T>(fs: T, rewrites: string[] | string[][]): T {
   if (!(rewrites instanceof Array))
     throw TypeError("rewrites must be a list of 2-tuples");
 
