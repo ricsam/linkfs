@@ -14,8 +14,9 @@ jobs:
       - run: bun run test
       - run: bun run build
       - run: |
-          echo '@ricsam:registry=https://registry.npmjs.org\n' >> .npmrc
+          echo '@ricsam:registry=https://registry.npmjs.org' >> .npmrc
           echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .npmrc
+          echo '//registry.npmjs.org/:always-auth=true' >> .npmrc
       - name: changeset publish
         run: npx changeset publish --access=public --registry=https://registry.npmjs.org/
         env:
