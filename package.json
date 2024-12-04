@@ -1,9 +1,17 @@
 {
   "name": "@ricsam/linkfs",
-  "version": "2.0.6",
+  "version": "2.0.8",
   "description": "Rewrites filesystem paths",
-  "main": "dist/index.js",
-  "types": "types",
+  "main": "dist/cjs/index.js",
+  "module": "dist/mjs/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/mjs/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./types/index.d.ts"
+    }
+  },
+  "types": "./types/index.d.ts",
   "keywords": [
     "fs",
     "file",
@@ -30,7 +38,7 @@
     "prettier": "^3.4.1"
   },
   "scripts": {
-    "build": "bun build src/index.ts --outdir ./dist --target node && tsc -p tsconfig.build.json",
+    "build": "tsc -p tsconfig.build.json && bun build src/index.ts --outdir ./dist/mjs --target browser --format esm --external memfs && bun build src/index.ts --outdir ./dist/cjs --target browser --format cjs --external memfs && ./patch-dist-dirs.sh",
     "test": "bun test"
   }
 }
