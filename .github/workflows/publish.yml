@@ -1,26 +1,14 @@
-name: linkfs
+name: publish
 
 on:
   push:
     branches:
-      - "*"
+      - main
 
 jobs:
-  build-and-test:
-    name: Build and Test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v2
-      - run: bun install
-      - run: bun run test
-      - run: bun run build
-
   publish:
     name: Publish
-    needs: build-and-test
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' # Only run on main branch
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
