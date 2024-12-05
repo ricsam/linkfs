@@ -1,6 +1,6 @@
 # linkfs
 
-> **NOTE:** This project is an updated fork of [linkfs](https://github.com/streamich/linkfs) with bug fixes and updates. The original version has not been updated in many years and have a some unresolved issues that are addressed in this fork.
+> **NOTE:** This project is an updated fork of [linkfs](https://github.com/streamich/linkfs) with bug fixes and updates. The original version has not been updated in many years (other than dependency auto-updates) and have a some unresolved issues that are addressed in this fork.
 
 Redirects filesystem paths.
 
