@@ -34,7 +34,7 @@
     "memfs": "4.17.0",
     "typescript": "5.7.3",
     "@types/bun": "latest",
-    "@changesets/cli": "2.28.0",
+    "@changesets/cli": "2.28.1",
     "prettier": "3.5.1"
   },
   "scripts": {
