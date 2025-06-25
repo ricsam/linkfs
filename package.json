@@ -35,7 +35,7 @@
     "typescript": "5.8.3",
     "@types/bun": "latest",
     "@changesets/cli": "2.29.5",
-    "prettier": "3.6.0"
+    "prettier": "3.6.1"
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json && bun build src/index.ts --outdir ./dist/mjs --target browser --format esm --external memfs && bun build src/index.ts --outdir ./dist/cjs --target browser --format cjs --external memfs && ./patch-dist-dirs.sh",
