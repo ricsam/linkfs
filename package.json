@@ -31,7 +31,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "memfs": "4.22.1",
+    "memfs": "4.23.0",
     "typescript": "5.8.3",
     "@types/bun": "latest",
     "@changesets/cli": "2.29.5",
