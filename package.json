@@ -32,7 +32,7 @@
   "dependencies": {},
   "devDependencies": {
     "memfs": "4.28.0",
-    "typescript": "5.8.3",
+    "typescript": "5.9.2",
     "@types/bun": "latest",
     "@changesets/cli": "2.29.5",
     "prettier": "3.6.2"
